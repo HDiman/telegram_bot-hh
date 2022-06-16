@@ -4,13 +4,16 @@ import telebot
 from auth_data import token
 
 
+today_day = datetime.now().strftime('%Y-%m-%d %H:%M')
+
+
 def get_data():
-    req = requests.get("https://yobit.net/api/3/ticker/btc_usd")
+    req = requests.get("https://")
     response = req.json()
-    sell_price = response["btc_usd"]["sell"]
-    today_day = datetime.now().strftime('%Y-%m-%d %H:%M')
-    print(f"{today_day}\n Sell BTC price: {sell_price}\n")
-    return f"{today_day}\n Sell BTC price: {round(sell_price)}\n"
+    result = response[]
+
+    print()
+    return
 
 
 def telegram_bot(token):
@@ -18,7 +21,7 @@ def telegram_bot(token):
 
     @bot.message_handler(commands=['start'])
     def start_message(message):
-        bot.send_message(message.chat.id, "Hello friend! Write the 'price' to find out the sell price of BTC")
+        bot.send_message(message.chat.id, "Hello friend!")
 
     @bot.message_handler(content_types=['text'])
     def send_text(message):
@@ -35,5 +38,6 @@ def telegram_bot(token):
 
 
 if __name__ == "__main__":
-    telegram_bot(token)
+    get_data()
+    # telegram_bot(token)
 
