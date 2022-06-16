@@ -4,13 +4,14 @@ import telebot
 from auth_data import token
 
 
+
 today_day = datetime.now().strftime('%Y-%m-%d %H:%M')
 
 
 def get_data():
     req = requests.get("https://")
     response = req.json()
-    result = response[]
+    # result = response[]
 
     print()
     return
