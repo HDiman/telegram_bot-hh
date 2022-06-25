@@ -26,20 +26,20 @@ def telegram_bot(token):
 
     @bot.message_handler(commands=['start'])
     def start_message(message):
-        bot.send_message(message.chat.id, "Code to solve problems")
+        bot.send_message(message.chat.id, "Coding")
 
     @bot.message_handler(content_types=['text'])
     def send_text(message):
-        if message.text.lower() == 'hh':
+        if message.text.lower() == 'h':
             try:
                 all_title = get_data()
                 for title in all_title:
                     bot.send_message(message.chat.id, title.text)
             except Exception as ex:
                 print(ex)
-                bot.send_message(message.chat.id, "Disconnection!!!")
+                bot.send_message(message.chat.id, "Don't stop to try!")
         else:
-            bot.send_message(message.chat.id, "More coding")
+            bot.send_message(message.chat.id, "I'm the best programmer")
 
     while True:
         try:
