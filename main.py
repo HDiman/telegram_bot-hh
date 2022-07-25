@@ -6,7 +6,8 @@ import time
 
 
 def get_data():
-    url_parsing = "https://hh.ru/search/vacancy?area=1&clusters=true&enable_snippets=true&ored_clusters=true&text=парсинг&search_period=1&hhtmFrom=vacancy_search_list"
+    # url_parsing = "https://hh.ru/search/vacancy?area=1&clusters=true&enable_snippets=true&ored_clusters=true&text=парсинг&search_period=1&hhtmFrom=vacancy_search_list"
+    url_parsing = "https://hh.ru/search/vacancy?area=1&clusters=true&enable_snippets=true&ored_clusters=true&search_field=name&text=Python+junior&search_period=30&hhtmFrom=vacancy_search_list"
     headers = {
         "Accept": "*/*",
         "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
